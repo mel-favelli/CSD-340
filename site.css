@@ -1,0 +1,23 @@
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+h1, h2, h3, h4 {
+    background-color: #4CAF50;  /* Green background */
+    color: white;               /* White text */
+    border: 1px solid #D6A800;  /* Yellow border */
+    padding: 10px;
+}
+a {
+    color: #D6A800;  /* Same yellow color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;  /* White when hovered */
+}
+
+a:visited {
+    color: #B58D00;  /* Slightly darker yellow when visited */
+}
