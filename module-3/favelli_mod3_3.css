@@ -1,0 +1,59 @@
+/* Center the h1 title on the page */
+h1 {
+    text-align: center;
+}
+
+/* Styling for the side-by-side divs */
+#container > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Set the width of the left and right divs to 45% */
+#container > div > div {
+    width: 45%;
+}
+
+/* Set the width of the last div to 100% and give it a margin-top of 60% */
+#container > div:last-child {
+    width: 100%;
+    margin-top: 60%;
+}
+
+/* Set the weight of the h3 tags to 500 */
+h3 {
+    font-weight: 500;
+}
+
+/* Set the weight of the list items to 300 */
+ol, ul {
+    font-weight: 300;
+}
+
+/* Styling for ordered list */
+ol {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style-position: inside;
+}
+
+/* Styling for unordered list */
+ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+
+/* Hover effect for links */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Float the last div to the right and set margin-bottom */
+#container > div:last-child a {
+    float: right;
+    margin-bottom: 20px;
+}
