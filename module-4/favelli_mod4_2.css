@@ -1,0 +1,76 @@
+/* this applies global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* this centers the container and gives it some padding */
+#container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/* this styles the h1 tag */
+h1 {
+    text-align: center;
+    color: rgba(0, 128, 255, 0.7); /* Optional, color can vary */
+}
+
+/* this styles the image gallery */
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for the 3 books */
+    gap: 20px;
+    margin-top: 10%;
+}
+
+/* this styles each book's section */
+.book {
+    text-align: center;
+}
+
+/* this styles the book titles */
+.book h3 {
+    color: rgba(255, 100, 100, 0.8); /* Optional, change color */
+}
+
+
+/* this styles each book's section */
+.book {
+    text-align: center;
+    border: 1px solid #ccc;  /* Adds a thin border around each div */
+    padding: 10px;  /* Adds some space inside the border */
+    border-radius: 5px;  /* Optional: rounds the corners of the border */
+}
+
+/* this makes a fised size for all 3 images */
+#image-gallery img {
+    width: 200px;   /* Set a fixed width for all images */
+    height: 300px;  /* Set a fixed height for all images */
+    object-fit: cover;  /* Ensures images are cropped to fit the box */
+}
+
+
+
+/* this styles the images */
+figure {
+    margin: 0;
+}
+
+/* this styles the figcaption */
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(0, 0, 0, 0.6); /* Optional */
+}
+
+/* this is optional but adds margin to the link */
+a {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
