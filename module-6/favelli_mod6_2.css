@@ -1,0 +1,88 @@
+/* Header styles */
+header {
+    background-color: #A63F00;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+/* Navbar styles */
+#navbar {
+    overflow: hidden;
+    background-color: #A63F00;
+    border-bottom: 15px solid #B59F71;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #7a2f00;
+    color: #ffd699;
+}
+
+/* Container and card styles */
+#container {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 50%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: #A63F00;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #A63F00;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: white;
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+    
