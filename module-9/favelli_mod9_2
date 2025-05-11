@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<!-- Melislsa Favelli -->
+<!-- Module 9 -->
+    
+<link rel="stylesheet" href="favelli_mod8_2.css">
+
+
+<head>
+       <script>
+           var firstVariableValue = "gift";
+           var secondVariableValue = "feathers";
+           var thirdVariableValue = "months";
+           var fourthVariableValue = "wild";
+       </script>
+    </head>
+
+    <body> 
+       
+       <h1>Assignment 9.3: Javascript - Part 1</h1>
+       
+        <h2> Bear The Wanderer</h2>
+
+        <p>White flash through dusk, a ghost in fur,
+        <br>With jaws stained red from nightly blur.
+        <br>He'd drag home rabbits, chickens, death—
+        <br>Each prize a <span id = "gift">_________</span>, each step a theft.
+
+        <p>The neighbors cursed, we feared the calls,
+        <br>While <span id = "feathers">_________</span> drifted down like falls.
+        <br>He'd vanish long into the night,    
+        <br>A rebel heart, no leash in sight.
+
+        <p>But <span id = "months">_________</span> wore down that hardened edge,
+        <br>He curled up warm beneath the hedge.
+        <br>No longer lost, but found his pack—
+        <br>And love, once <span id = "wild">_________</span>, now circles back.
+        <br>
+        <p>-Melissa Favelli
+    
+<br><br>
+
+        <button type="button"
+            onclick="document.getElementById('gift').innerHTML = firstVariableValue">gift</button>
+
+<br><br>
+
+        <button type="button"
+            onclick="document.getElementById('feathers').innerHTML = secondVariableValue">feathers</button>
+
+<br><br>
+
+        <button type="button"
+            onclick="document.getElementById('months').innerHTML = thirdVariableValue">months</button>
+
+<br><br>
+
+        <button type="button"
+            onclick="document.getElementById('wild').innerHTML = fourthVariableValue">wild</button><br>
+       
+       
+        </p> 
+ </body>
+<html>
+
