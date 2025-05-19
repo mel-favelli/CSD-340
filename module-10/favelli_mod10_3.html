@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 40px;
+    }
+
+    h1 {
+      color: maroon;
+    }
+
+    .image-gallery img {
+      width: 300px;
+      height: auto;
+      margin: 20px;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+  </style>
+
+<style>
+
+  .image-gallery img {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+</style>
+
+
+</head>
+<body>
+
+  <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+  <div class="image-gallery">
+    <img src="images/fire-normal.jpg" alt="Spinning Fire Normal" id="img1" onclick="toggleImage('img1', 'images/fire-normal.jpg', 'images/fire-negative.jpg')">
+    <img src="images/juneau-normal.jpg" alt="Juneau in Blacklight Normal" id="img2" onclick="toggleImage('img2', 'images/juneau-normal.jpg', 'images/juneau-negative.jpg')">
+  </div>
+
+  <script>
+    // Track which images are toggled
+    const toggled = {};
+
+    function toggleImage(id, normalSrc, negativeSrc) {
+      const img = document.getElementById(id);
+      if (!toggled[id]) {
+        img.src = negativeSrc;
+        toggled[id] = true;
+      } else {
+        img.src = normalSrc;
+        toggled[id] = false;
+      }
+    }
+  </script>
+
+</body>
+</html>
