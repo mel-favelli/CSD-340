@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      display: flex;
+      gap: 40px;
+      max-width: 900px; /* keep container from getting too wide */
+      margin: 0 auto; /* center horizontally */
+    }
+    .left-side, .right-side {
+      flex: 1; /* equal width for both sides */
+      max-width: 450px; /* max width per side */
+    }
+    .left-side {
+      position: sticky;
+      top: 20px;
+      font-size: 18px; /* bigger text */
+    }
+    .left-side input[type="text"] {
+      width: 100%;
+      font-size: 16px;
+      padding: 8px;
+      margin: 12px 0;
+      box-sizing: border-box;
+    }
+    .left-side button {
+      font-size: 16px;
+      padding: 10px 15px;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+    .right-side img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+    #displayArea {
+      margin-top: 20px;
+      white-space: pre-wrap;
+      min-height: 100px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+ <center> <h1>Assignment 11.2: JavaScript - Part 3</h1> </center>
+
+  <div class="container">
+    <div class="left-side">
+      <p>This is an interactive to-do list. Type in your first item in the text box and click "Add". Then, click the "Display" button to see the current items in your to-do list. Click on "Delete Last Entry" if you'd like to remove the last thing added to your list. Remember, you must click "Display" to see the items you've added, they will not show automatically.</p>
+
+      <input type="text" id="inputBox" placeholder="Enter task here" />
+      <button onclick="addItem()">Add</button>
+      <button onclick="deleteLast()">Delete Last Entry</button>
+      <button onclick="displayItems()">Display</button>
+
+      <div id="displayArea"></div>
+    </div>
+
+    <div class="right-side">
+      <img src="images/todo.png" alt="To-Do List Icon" />
+    </div>
+  </div>
+
+  <script>
+    let items = [];
+
+    function addItem() {
+      const input = document.getElementById('inputBox');
+      const value = input.value.trim();
+      if (value === '') {
+        alert('Please enter something before adding.');
+        return;
+      }
+      items.push(value);
+      alert(`Added "${value}" at position ${items.length}`);
+      input.value = '';
+      input.focus();
+    }
+
+    function deleteLast() {
+      if (items.length === 0) {
+        alert('Array is empty. Nothing to delete.');
+        return;
+      }
+      const removed = items.pop();
+      alert(`Deleted last entry: "${removed}"`);
+    }
+
+    function displayItems() {
+      if (items.length === 0) {
+        document.getElementById('displayArea').textContent = 'Array is empty.';
+        return;
+      }
+      let output = '';
+      for (let i = 0; i < items.length; i++) {
+        output += (i + 1) + '. ' + items[i] + '<br>';
+      }
+      document.getElementById('displayArea').innerHTML = output;
+    }
+  </script>
+</body>
+</html>
