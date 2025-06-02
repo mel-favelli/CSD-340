@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Assignment 12.2: Javascript - Part 4 </h1>
+        <div class="buttons">
+            <button onclick="displayAscending()">Top to Bottom</button>
+            <button onclick="displayDescending()">Bottom to Top</button>
+        </div>
+        <ul id="bookList"></ul>
+    </div>
+
+    <script>
+        const books = [
+            "The Cave",
+            "1984",
+            "To Kill a Mockingbird",
+            "The Catcher in the Rye",
+            "Perks of Being a Wallflower",
+            "The Curious Incident of the Dog in the Nighttime",
+            "CRANK",
+            "GLASS",
+            "The Great Gatsby",
+            "Pride and Prejudice"
+        ];
+                    
+
+        function displayAscending() {
+            const sorted = [...books].sort();
+            renderList(sorted);
+        }
+
+        function displayDescending() {
+            const sorted = [...books].sort().reverse();
+            renderList(sorted);
+        }
+
+        function renderList(arr) {
+            const list = document.getElementById("bookList");
+            list.innerHTML = "";
+            arr.forEach(book => {
+            const li = document.createElement("li");
+            li.textContent = book;
+            list.appendChild(li);
+        });
+    }
+  </script>
+</body>
